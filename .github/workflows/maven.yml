@@ -1,4 +1,4 @@
-name: spring-jwt with Maven
+name: Built task-management-system with Maven
 
 on:
   pull_request:
