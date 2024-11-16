@@ -6,7 +6,6 @@
          https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
         logicalFilePath="changelog/changelog.xml">
 
-
     <changeSet id="1727189440677-1" author="Aleksei Petrov">
         <createSequence incrementBy="50" sequenceName="users_seq" startValue="1000"/>
     </changeSet>

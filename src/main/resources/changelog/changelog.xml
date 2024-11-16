@@ -5,7 +5,10 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
         logicalFilePath="changelog/changelog.xml">
-        <include file="001-create-table.xml" relativeToChangelogFile="true"/>
-        <include file="002-populate-table_users.xml" relativeToChangelogFile="true"/>
+        <include file="001-create-table-users.xml" relativeToChangelogFile="true"/>
+        <include file="002-populate-table-users.xml" relativeToChangelogFile="true"/>
+        <include file="003-create-table-task.xml" relativeToChangelogFile="true"/>
+        <include file="004-populate-table-task.xml" relativeToChangelogFile="true"/>
+
 
 </databaseChangeLog>

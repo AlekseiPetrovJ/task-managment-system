@@ -6,7 +6,7 @@
          https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
         logicalFilePath="changelog/changelog.xml">
 
-    <changeSet id="1723290651203-1" author="Aleksei Petrov">
+    <changeSet id="172329065120-1" author="Aleksei Petrov">
         <insert tableName="users">
             <column name="id" valueNumeric="1"/>
             <column name="username" value="admin"/>
@@ -16,7 +16,7 @@
         </insert>
     </changeSet>
 
-    <changeSet id="1723290651203-2" author="Aleksei Petrov">
+    <changeSet id="172329065120-2" author="Aleksei Petrov">
         <insert tableName="users">
             <column name="id" valueNumeric="2"/>
             <column name="username" value="user"/>

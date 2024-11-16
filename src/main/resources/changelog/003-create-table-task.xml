@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.5.xsd"
+        logicalFilePath="changelog/changelog.xml">
+
+    <changeSet id="1731773997453-1" author="Aleksei Petrov">
+        <createSequence incrementBy="50" sequenceName="task_seq" startValue="1000"/>
+    </changeSet>
+    <changeSet id="1731773997453-3" author="Aleksei Petrov">
+        <createTable tableName="task">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_task"/>
+            </column>
+            <column name="head" type="VARCHAR(255)"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="status" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="priority" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comment" type="VARCHAR(255)"/>
+            <column name="author_id" type="BIGINT"/>
+            <column name="executor_id" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="1731773997453-7" author="Aleksei Petrov">
+        <addForeignKeyConstraint baseColumnNames="author_id" baseTableName="task" constraintName="FK_TASK_ON_AUTHOR"
+                                 referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+    <changeSet id="1731773997453-8" author="Aleksei Petrov">
+        <addForeignKeyConstraint baseColumnNames="executor_id" baseTableName="task" constraintName="FK_TASK_ON_EXECUTOR"
+                                 referencedColumnNames="id" referencedTableName="users"/>
+    </changeSet>
+</databaseChangeLog>
