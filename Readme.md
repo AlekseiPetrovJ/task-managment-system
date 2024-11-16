@@ -1,3 +1,4 @@
+[![spring-jwt with Maven](https://github.com/AlekseiPetrovJ/task-managment-system/actions/workflows/maven.yml/badge.svg)](https://github.com/AlekseiPetrovJ/task-managment-system/actions/workflows/maven.yml)
 
 # Система управления задачами
 
