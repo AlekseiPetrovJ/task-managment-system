@@ -40,4 +40,8 @@ public class User implements UserDetails {
         return List.of(new SimpleGrantedAuthority(role.name()));
     }
 
+    public boolean isAdmin(){
+        return role.equals(Role.ROLE_ADMIN);
+    }
+
 }
