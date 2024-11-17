@@ -11,15 +11,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: validate
-    #              ddl-auto: create
     properties:
       hibernate:
         format_sql: true
     show-sql: true
   datasource:
     driver: org.postgresql.Driver
-#    url: jdbc:postgresql://postgres:5432/tms
-    url: jdbc:postgresql://localhost:5433/tms
+    url: jdbc:postgresql://postgres:5432/tms
+#    url: jdbc:postgresql://localhost:5433/tms
     username: tms
     password: tms
   liquibase:

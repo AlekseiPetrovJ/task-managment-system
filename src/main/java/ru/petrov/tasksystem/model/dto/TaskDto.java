@@ -15,10 +15,10 @@ import ru.petrov.tasksystem.model.TaskStatus;
 @AllArgsConstructor
 public class TaskDto {
     Long id;
-    @Schema(description = "Заголовок задачи")
+    @Schema(description = "Заголовок задачи", example = "Заказать книгу")
     @NotBlank
     String head;
-    @Schema(description = "Описание")
+    @Schema(description = "Описание", example = "По два экземпляра на отдел.")
     @NotBlank
     String description;
     @NotNull
@@ -30,8 +30,9 @@ public class TaskDto {
     @Schema(description = "Комментарий")
     String comment;
 
-    @Schema(description = "Имя автора")
+    @Schema(description = "Имя автора", example = "user")
     String authorUsername;
+    @NotNull
     @Schema(description = "Имя исполнителя", example = "user")
     String executorUsername;
 }
