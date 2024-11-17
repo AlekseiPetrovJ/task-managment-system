@@ -1,11 +1,21 @@
 [![spring-jwt with Maven](https://github.com/AlekseiPetrovJ/task-managment-system/actions/workflows/maven.yml/badge.svg)](https://github.com/AlekseiPetrovJ/task-managment-system/actions/workflows/maven.yml)
 
 # Система управления задачами
+Администратор и автор задачи могут изменять любые параметры в задаче.
+Пользователи не администраторы могут изменять только статус задачи и комментарий 
+только в задачах в которых они являются исполнителями.
 
 Реализованы REST методы:
 - POST получение токена
+- GET получения всех задач c пагинацией
+- POST добавление новой задачи
+- PUT изменение существующей задачи
 
-Учетные записи хранятся в postgresql. Начальные учетные записи пользователя и администратора вносятся в БД посредством liquibase.
+Задачи и пользователи хранятся в postgresql. Демо данные внесены в БД посредством liquibase.
+
+Применены: Java 17+, Spring Boot, PostgreSQL, Spring Security, Liquibase, Docker-compose.
+В качестве CI настроен github action.
+
 
 ## [Техническое задание](tz.txt)
 
